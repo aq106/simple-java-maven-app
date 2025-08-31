@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build-Salam') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
@@ -21,9 +21,9 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-        stage('Complete') {
+        stage('Complete-MashaAllah') {
             steps {
-                echo 'Job Complete!'
+                echo 'Job Complete It works!'
             }
         }
     }
